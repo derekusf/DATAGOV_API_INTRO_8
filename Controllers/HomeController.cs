@@ -30,7 +30,7 @@ namespace DATAGOV_API_INTRO_8.Controllers
             // If the data hasn't been fetched yet, fetch data from the API
             if (!_parksService.IsDataFetched())
             {
-                Console.WriteLine("Fetching data from API...");
+                Console.WriteLine("Fetching Parks data from API...");
                 string apiPath = $"{BASE_URL}/parks?limit=20&api_key={API_KEY}";
 
                 HttpResponseMessage response = await _httpClient.GetAsync(apiPath);
@@ -51,6 +51,39 @@ namespace DATAGOV_API_INTRO_8.Controllers
                         Console.WriteLine($"Number of parks fetched: {parks.data.Count}");
                         _parksService.AddParks(parks.data);  // Store API data in memory
                         _parksService.MarkDataAsFetched();   // Mark data as fetched
+                    }
+                    else
+                    {
+                        Console.WriteLine("Deserialization failed or no data available.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Failed to fetch data from API.");
+                }
+
+                //Fetch Events
+                Console.WriteLine("Fetching Parks data from API...");
+                apiPath = $"{BASE_URL}/events?limit=20&api_key={API_KEY}";
+
+                response = await _httpClient.GetAsync(apiPath);
+                Console.WriteLine($"API response status code: {response.StatusCode}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string eventsData = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine("Data fetched from API successfully.");
+                    Console.WriteLine($"JSON Response: {eventsData}");
+
+                    // Deserialize the JSON data
+                    // https://json2csharp.com/
+                    Events events = JsonConvert.DeserializeObject<Events>(eventsData);
+
+                    if (events != null && events.data != null)
+                    {
+                        Console.WriteLine($"Number of parks fetched: {events.data.Count}");
+                        // _parksService.AddParks(events.data);  // Store API data in memory
+                        // _parksService.MarkDataAsFetched();   // Mark data as fetched
                     }
                     else
                     {

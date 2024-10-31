@@ -55,19 +55,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/harshasaijagu/.nuget/packages/": {}
+    "/Users/derektran1/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/harshasaijagu/Downloads/Course Work/DIS GA/Apps/DATAGOV_API_INTRO_8/DATAGOV_API_INTRO_8.csproj",
+      "projectUniqueName": "/Users/derektran1/Library/CloudStorage/OneDrive-Personal/1 - Master Degree/S3-ISM6225/Class Sample Code/DATAGOV_API_INTRO_8/DATAGOV_API_INTRO_8.csproj",
       "projectName": "DATAGOV_API_INTRO_8",
-      "projectPath": "/Users/harshasaijagu/Downloads/Course Work/DIS GA/Apps/DATAGOV_API_INTRO_8/DATAGOV_API_INTRO_8.csproj",
-      "packagesPath": "/Users/harshasaijagu/.nuget/packages/",
-      "outputPath": "/Users/harshasaijagu/Downloads/Course Work/DIS GA/Apps/DATAGOV_API_INTRO_8/obj/",
+      "projectPath": "/Users/derektran1/Library/CloudStorage/OneDrive-Personal/1 - Master Degree/S3-ISM6225/Class Sample Code/DATAGOV_API_INTRO_8/DATAGOV_API_INTRO_8.csproj",
+      "packagesPath": "/Users/derektran1/.nuget/packages/",
+      "outputPath": "/Users/derektran1/Library/CloudStorage/OneDrive-Personal/1 - Master Degree/S3-ISM6225/Class Sample Code/DATAGOV_API_INTRO_8/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/harshasaijagu/.nuget/NuGet/NuGet.Config"
+        "/Users/derektran1/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -120,7 +120,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
